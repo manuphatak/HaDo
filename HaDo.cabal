@@ -24,7 +24,8 @@ source-repository head
 
 library
   exposed-modules:
-      Todo
+      Todo.Action
+      Todo.Persist
   other-modules:
       Paths_HaDo
   hs-source-dirs:
