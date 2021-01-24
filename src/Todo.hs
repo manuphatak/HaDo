@@ -1,6 +1,12 @@
 module Todo where
 
-type Action = [String] -> IO ()
+import Control.Monad.Logger
+import Control.Monad.Reader
+import Control.Monad.Trans.Resource
+import Database.Persist
+import Database.Persist.Sqlite
+
+type Action = [String] -> ReaderT SqlBackend (NoLoggingT (ResourceT IO)) ()
 
 dispatch :: [(String, Action)]
 dispatch = [("add", add), ("view", view), ("remove", remove)]

@@ -20,6 +20,15 @@ description: Please see the README on GitHub at <https://github.com/manuphatak/H
 
 dependencies:
   - base >= 4.7 && < 5
+  - persistent
+  - persistent-sqlite
+  - persistent-template
+  - esqueleto
+  - time
+  - transformers
+  - monad-logger
+  - resourcet
+  - mtl
 
 library:
   source-dirs: src

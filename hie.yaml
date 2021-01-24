@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "HaskellIO:lib"
+
+    - path: "./app/Main.hs"
+      component: "HaskellIO:exe:temp-todo"
+
+    - path: "./app/Paths_HaskellIO.hs"
+      component: "HaskellIO:exe:temp-todo"
+
+    - path: "./test"
+      component: "HaskellIO:test:HaskellIO-test"
