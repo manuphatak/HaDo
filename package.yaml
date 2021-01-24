@@ -1,6 +1,6 @@
-name: HaskellIO
+name: HaDo
 version: 0.0.0.0
-github: "manuphatak/HaskellIO"
+github: "manuphatak/HaDo"
 license: BSD3
 author: "Manu Phatak"
 maintainer: "manu@phatak.io"
@@ -16,7 +16,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description: Please see the README on GitHub at <https://github.com/manuphatak/HaskellIO#readme>
+description: Please see the README on GitHub at <https://github.com/manuphatak/HaDo#readme>
 
 dependencies:
   - base >= 4.7 && < 5
@@ -34,7 +34,7 @@ library:
   source-dirs: src
 
 executables:
-  temp-todo:
+  hado:
     main: Main.hs
     source-dirs: app
     ghc-options:
@@ -43,10 +43,10 @@ executables:
       - -with-rtsopts=-N
       - -O2
     dependencies:
-      - HaskellIO
+      - HaDo
 
 tests:
-  HaskellIO-test:
+  HaDo-test:
     main: Spec.hs
     source-dirs: test
     ghc-options:
@@ -57,7 +57,7 @@ tests:
       - -O2
 
     dependencies:
-      - HaskellIO
+      - HaDo
       - hspec-discover
       - hspec
       - QuickCheck

@@ -1,13 +1,13 @@
 cradle:
   stack:
     - path: "./src"
-      component: "HaskellIO:lib"
+      component: "HaDo:lib"
 
     - path: "./app/Main.hs"
-      component: "HaskellIO:exe:temp-todo"
+      component: "HaDo:exe:hado"
 
-    - path: "./app/Paths_HaskellIO.hs"
-      component: "HaskellIO:exe:temp-todo"
+    - path: "./app/Paths_HaDo.hs"
+      component: "HaDo:exe:hado"
 
     - path: "./test"
-      component: "HaskellIO:test:HaskellIO-test"
+      component: "HaDo:test:HaDo-test"
