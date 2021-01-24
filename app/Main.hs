@@ -2,12 +2,11 @@
 
 module Main where
 
-import Control.Monad.IO.Class
-import Database.Persist.Sqlite
-import Database.Persist.TH
-import System.Environment
-import Todo.Action
-import Todo.Persist
+import Control.Monad.IO.Class (MonadIO (..))
+import Database.Persist.Sqlite (runMigration, runSqlite)
+import System.Environment (getArgs)
+import Todo.Action (dispatch)
+import Todo.Persist (migrateAll)
 
 main :: IO ()
 main = runSqlite "main.sqlite3" $ do

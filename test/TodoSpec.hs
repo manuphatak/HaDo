@@ -1,7 +1,6 @@
 module TodoSpec (main, spec) where
 
 import Test.Hspec
-import Test.QuickCheck
 
 -- `main` is here so that this module can be run from GHCi on its own.  It is
 -- not needed for automatic spec discovery.

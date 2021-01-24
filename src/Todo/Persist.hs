@@ -1,6 +1,4 @@
 {-# LANGUAGE DerivingStrategies #-}
--- {-# LANGUAGE EmptyDataDecls #-}
--- {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
@@ -13,10 +11,15 @@
 
 module Todo.Persist where
 
-import Control.Monad.IO.Class
-import Data.Time
-import Database.Persist.Sqlite
+import Data.Time (UTCTime)
+import Database.Persist.Sqlite (BackendKey (..))
 import Database.Persist.TH
+  ( mkMigrate,
+    mkPersist,
+    persistLowerCase,
+    share,
+    sqlSettings,
+  )
 
 share
   [mkPersist sqlSettings, mkMigrate "migrateAll"]
